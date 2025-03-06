@@ -6,8 +6,9 @@ local options = {
 }
 
 if platform.is_win then
-   options.default_prog = { 'powershell', '-nologo' }
+   options.default_prog = { 'C:/Program Files/PowerShell/7/pwsh' }
    options.launch_menu = {
+      { label = 'PowerShell 7', args = { 'C:/Program Files/PowerShell/7/pwsh' } },
       { label = 'PowerShell Core', args = { 'pwsh' } },
       { label = 'PowerShell Desktop', args = { 'powershell', '-nologo' } },
       { label = 'Command Prompt', args = { 'cmd' } },
@@ -16,7 +17,7 @@ if platform.is_win then
       
       {
          label = 'Git Bash',
-         args = { 'D:\\scoop\\apps\\git\\current\\bin\\bash.exe' },
+         args = { 'D://scoop//apps//git//current//bin//bash.exe' },
       },
    }
 elseif platform.is_mac then
